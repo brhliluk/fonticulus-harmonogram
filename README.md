@@ -12,7 +12,7 @@ Python utilita, která rozparsuje harmonogram z csv souboru a vytvoří programo
   - Jednotlivé google dokumenty je potřeba ze složky pomocí `CTRL+C` a `CTRL+V` vykopírovat - využití jiných způsobů bohužel překáží vlastnictví souborů vytvořeným Google cloud service účtem.
 
 ## Formát harmonogramu
-  - Řídit se můžete přiloženým nahraným harmonogramem ([Excelovský soubor](harmonogram_2023.xlsx)/[Stejný soubor v csv formátu](timetable.csv))
+  - Řídit se můžete přiloženým nahraným harmonogramem ([Excelovský soubor](harmonogram-2023.xlsx)/[Stejný soubor v csv formátu](timetable.csv))
   - Jako program, pro který se vytváří programový list se považuje buňka, která obsahuje levou i pravou závorku.
   - Jako datum programu se považuje první buňka řádku.
   - Počáteční čas programu je první sloupec, ve kterém se nachází.

@@ -3,7 +3,7 @@ Python utilita, která rozparsuje harmonogram z csv souboru a vytvoří programo
 
 ## Setup
   - Podle [návodu](https://ericmjl.github.io/blog/2023/3/8/how-to-automate-the-creation-of-google-docs-with-python/), popsaném v prvních dvou bodech si vytvořte servisní účet na google cloud a nastavte si přístup ke google disku.
-  - Nahraďte soubor `timetable.csv` harmonogramem, který chcete rozdělit do programových listů. Harmonogram musí dodržovat stanovený formát viz. [Formát harmonogramu](#Formát-harmonogramu).
+  - Nahraďte soubor `timetable.csv` harmonogramem, který chcete rozdělit do programových listů. Harmonogram musí dodržovat stanovený formát viz. [Formát harmonogramu](#Formát-harmonogramu). Jeho načtení přímo z disku není kvůli přístupovým právům Google cloud API reálné.
   - Nainstalujte si potřebné knihovny pomocí `pip install PyDrive2 pyprojroot dotenv markdown markdown_strings datetime pandas`
 
 ## Používání
@@ -20,3 +20,7 @@ Python utilita, která rozparsuje harmonogram z csv souboru a vytvoří programo
   - Instruktoři vedoucí daný program jsou uvedeni v závorce.
   - V případě, že buňka obsahuje ',' - předpokládá se že jimi jsou odděleny jednotlivé programy, které probíhají ve stejný čas.
   - V případě shody názvu programů se vezme počáteční čas z prvního a konečný čas z dalšího.
+
+## TODO:
+  - Parametrizace vstupů (argumenty pro vstupní csv soubor, opakované programy v harmonogramu...)
+  - Lepší oddělení šablony (načítání ze souboru...)

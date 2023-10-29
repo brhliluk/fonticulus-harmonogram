@@ -2,8 +2,8 @@
 Python utilita, která rozparsuje harmonogram z csv souboru a vytvoří programové listy
 
 ## Setup
-  - Podle (návodu)[https://ericmjl.github.io/blog/2023/3/8/how-to-automate-the-creation-of-google-docs-with-python/], popsaném v prvních dvou bodech si vytvořte servisní účet na google cloud a nastavte si přístup ke google disku.
-  - Nahraďte soubor `timetable.csv` harmonogramem, který chcete rozdělit do programových listů. Harmonogram musí dodržovat stanovený formát viz. formát.
+  - Podle [návodu](https://ericmjl.github.io/blog/2023/3/8/how-to-automate-the-creation-of-google-docs-with-python/), popsaném v prvních dvou bodech si vytvořte servisní účet na google cloud a nastavte si přístup ke google disku.
+  - Nahraďte soubor `timetable.csv` harmonogramem, který chcete rozdělit do programových listů. Harmonogram musí dodržovat stanovený formát viz. [Formát harmonogramu](#Formát-harmonogramu).
   - Nainstalujte si potřebné knihovny pomocí `pip install PyDrive2 pyprojroot dotenv markdown markdown_strings datetime pandas`
 
 ## Používání
@@ -12,7 +12,7 @@ Python utilita, která rozparsuje harmonogram z csv souboru a vytvoří programo
   - Jednotlivé google dokumenty je potřeba ze složky pomocí `CTRL+C` a `CTRL+V` vykopírovat - využití jiných způsobů bohužel překáží vlastnictví souborů vytvořeným Google cloud service účtem.
 
 ## Formát harmonogramu
-  - Řídit se můžete přiloženým nahraným harmonogramem (harmonogram 2023.xlsx/timetable.csv)
+  - Řídit se můžete přiloženým nahraným harmonogramem ([Excelovský soubor](harmonogram_2023.xlsx)/[Stejný soubor v csv formátu](timetable.csv))
   - Jako program, pro který se vytváří programový list se považuje buňka, která obsahuje levou i pravou závorku.
   - Jako datum programu se považuje první buňka řádku.
   - Počáteční čas programu je první sloupec, ve kterém se nachází.

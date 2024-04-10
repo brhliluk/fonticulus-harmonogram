@@ -5,11 +5,10 @@ from timetable_parser import Event
 
 def document_template(event: Event):
     text = f"""
-{markdown_strings.header("Základní informace:", 1)}\n
-{markdown_strings.bold("Název programu:")} {event.name}\n
+{markdown_strings.header(event.name, 1)}\n
 {markdown_strings.bold("Datum:")} {event.date}\n
-{markdown_strings.bold("Čas:")} {event.start_time.time()} - {event.end_time.time()}\n
-{markdown_strings.bold("Časová dotace:")} {event.get_length()}\n
+{markdown_strings.bold("Čas:")} {event.start_time.strftime("%H:%M")} - {event.end_time.strftime("%H:%M")}\n
+{markdown_strings.bold("Časová dotace:")} {str(event.get_length().seconds//3600) + ":" + str((event.get_length().seconds//60)%60).zfill(2)}\n
 {markdown_strings.bold("Instruktoři:")} {event.team}\n
 {markdown_strings.horizontal_rule()}
 {markdown_strings.bold("Pomůcky a materiál, prostředí:")}\n

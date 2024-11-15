@@ -9,33 +9,27 @@ def document_template(event: Event):
 {markdown_strings.bold("Datum:")} {event.date}\n
 {markdown_strings.bold("Čas:")} {event.start_time.strftime("%H:%M")} - {event.end_time.strftime("%H:%M")}\n
 {markdown_strings.bold("Časová dotace:")} {str(event.get_length().seconds//3600) + ":" + str((event.get_length().seconds//60)%60).zfill(2)}\n
-{markdown_strings.bold("Instruktoři:")} {event.team}\n
+{markdown_strings.bold("Instruktoři:")} __{event.team[0]}__ {"+" if (len(event.team[1:]) > 0) else ""} {' + '.join(event.team[1:])}\n
+"Pozorovatel:"\n
 {markdown_strings.horizontal_rule()}
-{markdown_strings.bold("Pomůcky a materiál, prostředí:")}\n
-Příprava (kdy):\n
-Příprava (co):\n
+{markdown_strings.bold("Cíle programu:")}\n
+{markdown_strings.bold("Kontext programu:")}\n
 {markdown_strings.horizontal_rule()}
 {markdown_strings.bold("Fyzická náročnost (1-6):")}\n
 {markdown_strings.bold("Psychická náročnost (1-6):")}\n
 {markdown_strings.bold("Rizika:")}\n
-
-Cíle programu:\n
-\n
-
-Kontext programu:\n
-\n
-
-Příprava ({markdown_strings.bold("Zápisy z porad, nápady, rozdělení toho co kdo připravuje…")})\n
-\n
-
-Popis programu ({markdown_strings.bold("Popis průběhu, pravidla her, návody, techniky, metody…")})\n
-
 {markdown_strings.horizontal_rule()}
-Přílohy a Zdroje:\n
-
+{markdown_strings.bold("Pomůcky a materiál:")}\n
+{markdown_strings.bold("Prostředí:")}\n
+Příprava (kdy):\n
 {markdown_strings.horizontal_rule()}
-Hodnocení ({markdown_strings.bold("Moje hodnocení, sebereflexe a doporučení pro příště…")})\n
-
+{markdown_strings.bold("Poznámky:")}\n
+{markdown_strings.horizontal_rule()}
+{markdown_strings.bold("Popis programu:")}\n
+{markdown_strings.horizontal_rule()}
+{markdown_strings.bold("Přílohy a Zdroje:")}\n
+{markdown_strings.horizontal_rule()}
+{markdown_strings.bold("Hodnocení:")}\n
 Hodnocení pozorovatele:\n
 """
     return text

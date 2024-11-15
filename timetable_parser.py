@@ -11,7 +11,7 @@ class Event:
         self.date = date
         self.start_time = start_time
         self.end_time = end_time
-        self.team = split_name[1].removesuffix(')')
+        self.team = split_name[1].removesuffix(')').split(' + ')
 
     def get_length(self):
         return self.end_time - self.start_time
